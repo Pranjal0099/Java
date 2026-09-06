@@ -1,14 +1,30 @@
-import java.util.*;
-public class Input{
-public static void main(String args[]){
-Scanner sc =new Scanner(System.in);
-System.out.println("Enter First number");
-int number1 =sc.nextInt();
-System.out.println("Enter Second number");
-int number2=sc.nextInt();
+import java.util.Scanner;
 
-int Sum=number1 + number2;
-System.out.println("This is Sum of Two Number:"+ Sum);
-}
+public class Input {
 
+    public static void studentMarks() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter marks of 5 subjects:");
+
+        int maths = sc.nextInt();
+        int science = sc.nextInt();
+        int english = sc.nextInt();
+        int hindi = sc.nextInt();
+        int marathi = sc.nextInt();
+
+        int totalMarks = maths + science + english + hindi + marathi;
+
+        double percentage = (totalMarks / 500.0) * 100;
+
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Percentage: " + percentage + "%");
+    }
+
+    public static void main(String[] args) {
+
+        studentMarks();
+
+    }
 }
